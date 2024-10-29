@@ -6,8 +6,5 @@ import (
 
 func main() {
 	app := gui_app.App{}
-	app.InitMainGUI()
-	app.InitMainWindow()
-	app.InitMainTray()
 	app.Run()
 }

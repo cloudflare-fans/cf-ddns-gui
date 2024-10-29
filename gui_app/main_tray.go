@@ -23,7 +23,7 @@ func trayMenu(window *fyne.Window) []*fyne.MenuItem {
 	}
 }
 
-func (_this *App) InitMainTray() {
+func (_this *App) initMainTray() {
 	a := *_this.mainApp
 	w := *_this.mainWindow
 

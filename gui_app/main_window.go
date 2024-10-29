@@ -5,7 +5,7 @@ import (
 	"fyne.io/fyne/v2/widget"
 )
 
-func (_this *App) InitMainWindow() {
+func (_this *App) initMainWindow() {
 	a := *_this.mainApp
 	w := a.NewWindow("Hello")
 

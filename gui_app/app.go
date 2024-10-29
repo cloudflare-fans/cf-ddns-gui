@@ -11,5 +11,8 @@ type App struct {
 }
 
 func (_this *App) Run() {
+	_this.initMainApp()
+	_this.initMainWindow()
+	_this.initMainTray()
 	(*_this.mainApp).Run()
 }

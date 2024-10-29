@@ -1,7 +1,12 @@
 package main
 
-import "github.com/cloudflare-fans/cf-ddns-gui/tray"
+import (
+	"github.com/cloudflare-fans/cf-ddns-gui/gui_app"
+)
 
 func main() {
-	tray.InitTray()
+	app := gui_app.App{}
+	app.InitMainGUI()
+	app.InitMainWindow()
+	app.RunTray() // blocking
 }

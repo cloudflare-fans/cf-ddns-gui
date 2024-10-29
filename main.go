@@ -8,5 +8,6 @@ func main() {
 	app := gui_app.App{}
 	app.InitMainGUI()
 	app.InitMainWindow()
-	app.RunTray() // blocking
+	app.InitMainTray()
+	app.Run()
 }

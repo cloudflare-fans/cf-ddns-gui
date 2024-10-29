@@ -9,3 +9,7 @@ type App struct {
 	mainWindow *fyne.Window
 	tray       *fyne.Container
 }
+
+func (_this *App) Run() {
+	(*_this.mainWindow).ShowAndRun()
+}

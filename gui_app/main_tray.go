@@ -24,7 +24,7 @@ func trayMenu(window *fyne.Window) []*fyne.MenuItem {
 }
 
 func (_this *App) InitMainTray() {
-	a := *_this.mainGUI
+	a := *_this.mainApp
 	w := *_this.mainWindow
 
 	if desk, ok := a.(desktop.App); ok {

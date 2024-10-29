@@ -4,5 +4,5 @@ import "fyne.io/fyne/v2/app"
 
 func (_this *App) InitMainGUI() {
 	a := app.New()
-	_this.mainGUI = &a
+	_this.mainApp = &a
 }

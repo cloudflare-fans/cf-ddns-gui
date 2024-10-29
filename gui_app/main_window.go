@@ -6,7 +6,7 @@ import (
 )
 
 func (_this *App) InitMainWindow() {
-	a := *_this.mainGUI
+	a := *_this.mainApp
 	w := a.NewWindow("Hello")
 
 	hello := widget.NewLabel("Hello Fyne!")

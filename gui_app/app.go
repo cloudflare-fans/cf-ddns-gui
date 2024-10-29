@@ -5,11 +5,11 @@ import (
 )
 
 type App struct {
-	mainGUI    *fyne.App
+	mainApp    *fyne.App
 	mainWindow *fyne.Window
 	tray       *fyne.Container
 }
 
 func (_this *App) Run() {
-	(*_this.mainWindow).ShowAndRun()
+	(*_this.mainApp).Run()
 }

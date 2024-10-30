@@ -7,7 +7,7 @@ import (
 )
 
 func (_this *App) initMainApp() {
-	a := app.New()
+	a := app.NewWithID("com.github.cloudflare-fans.cf-ddns-gui")
 	icon := fyne.StaticResource{
 		StaticName:    "x",
 		StaticContent: _icon.Data,

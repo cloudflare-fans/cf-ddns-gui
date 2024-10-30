@@ -1,21 +1,26 @@
 package gui_app
 
 import (
+	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/container"
-	"fyne.io/fyne/v2/widget"
+	"github.com/cloudflare-fans/cf-ddns-gui/gui_app/tab"
 )
 
 func (_this *App) initMainWindow() {
 	a := *_this.mainApp
-	w := a.NewWindow("Hello")
+	w := a.NewWindow("cfDDNS")
+	w.Resize(fyne.NewSize(400, 300))
+	w.SetFixedSize(true)
 
-	hello := widget.NewLabel("Hello Fyne!")
-	w.SetContent(container.NewVBox(
-		hello,
-		widget.NewButton("Hi!", func() {
-			hello.SetText("Welcome :)")
-		}),
-	))
+	tabs := container.NewAppTabs(
+		tab.Home,
+		tab.DDNSTasks,
+		tab.Logs,
+		tab.About,
+	)
 
+	tabs.SetTabLocation(container.TabLocationLeading)
+
+	w.SetContent(tabs)
 	_this.mainWindow = &w
 }

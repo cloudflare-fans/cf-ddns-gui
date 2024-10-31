@@ -24,11 +24,17 @@ if [ ! -f "$1" ]; then
     exit
 fi
 
-OUTPUT=icon_unix.go
+OUTPUT_DIR=${1%.*}
+mkdir "${OUTPUT_DIR}"
+
+BASENAME=$(basename "${1}")
+PACKAGE=${BASENAME%.*}
+
+OUTPUT=$OUTPUT_DIR/icon_unix.go
 echo Generating $OUTPUT
 echo "//+build linux darwin" > $OUTPUT
 echo >> $OUTPUT
-cat "$1" | $GOPATH/bin/2goarray Data icon >> $OUTPUT
+cat "$1" | $GOPATH/bin/2goarray Data "${PACKAGE}" >> $OUTPUT
 if [ $? -ne 0 ]; then
     echo Failure generating $OUTPUT
     exit
